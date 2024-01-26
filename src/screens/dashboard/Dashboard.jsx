@@ -18,19 +18,46 @@ import QuizAnalytics from "./quiz_analytics";
 import Overview from "./overview";
 
 const Dashboard = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
 
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [width, setWidth] = useState(window.innerWidth);
   const [height, setHeight] = useState(window.innerHeight);
-
   const [activeScreen, setActiveScreen] = useState("dashboard");
-
   const [showModal, setShowModal] = useState(false);
+  const [email, setEmail] = useState("");
+  const [quizName, setQuizName] = useState("");
+  const [quizType, setQuizType] = useState("");
+  const [questions, setQuestions] = useState([1]);
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [showQuestionModal, setShowQuestionModal] = useState(false);
+  const [pollQuestion, setPollQuestion] = useState({});
+  const [options, setOptions] = useState(
+    Array(100)
+      .fill()
+      .map(() => [
+        { text: "", imageURL: "" },
+        { text: "", imageURL: "" },
+        { text: "", imageURL: "" },
+        { text: "", imageURL: "" },
+      ])
+  );
+  const [selectedOptionType, setSelectedOptionType] = useState(0);
+  const [ansOption, setAnsOption] = useState({});
+  const [timerType, setTimerType] = useState({});
+  const [newQuizId, setNewQuizId] = useState(null);
+  const [quizzes, setQuizzes] = useState([]);
+  const [isAnalyticsLoading, setAnalyticsLoading] = useState(true);
+  const [showQuizPublishedModal, setShowQuizPublishedModal] = useState(false);
+  const [quizData, setQuizData] = useState(null);
+  const [trendingQuizzes, setTrendingQuizzes] = useState([]);
+  const [dashboardLoading, setDashboardLoading] = useState(true);
+
   const handleDeleteIconClick = (quizId) => {
     setQuizIdToDelete(quizId);
     setShowModal(true);
   };
+
   const [quizIdToDelete, setQuizIdToDelete] = useState(null);
 
   const handleDelete = () => {
@@ -54,9 +81,6 @@ const Dashboard = () => {
   };
 
   //for createQuiz Screen
-  const [email, setEmail] = useState("");
-  const [quizName, setQuizName] = useState("");
-  const [quizType, setQuizType] = useState("");
   const handleCancelQuizModal = () => {
     setActiveScreen("dashboard");
   };
@@ -76,7 +100,6 @@ const Dashboard = () => {
 
   //Question Modal -
   //for question numbers
-  const [questions, setQuestions] = useState([1]);
   const handleAddQuestion = () => {
     // if (questions.length < 5) {
     setQuestions([...questions, { title: "" }]);
@@ -98,8 +121,6 @@ const Dashboard = () => {
     // setCurrentQuestionIndex(index-1)
   };
 
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-
   useEffect(() => {
     // Perform side effects here when currentQuestionIndex changes
   }, [currentQuestionIndex]);
@@ -110,41 +131,22 @@ const Dashboard = () => {
   };
 
   //for questions and options
-  const [showQuestionModal, setShowQuestionModal] = useState(false);
-
   const handleOptionTypeSelect = (index) => {
     setSelectedOptionType(index);
   };
 
-  const [pollQuestion, setPollQuestion] = useState({});
+  
   const handleQuestionTextChange = (e, index) => {
     const updatedQuestions = { ...pollQuestion };
     updatedQuestions[index] = e.target.value;
     setPollQuestion(updatedQuestions);
   };
 
-  const [options, setOptions] = useState(
-    Array(100)
-      .fill()
-      .map(() => [
-        { text: "", imageURL: "" },
-        { text: "", imageURL: "" },
-        { text: "", imageURL: "" },
-        { text: "", imageURL: "" },
-      ])
-  );
-
-  const [selectedOptionType, setSelectedOptionType] = useState(0);
-  const [ansOption, setAnsOption] = useState({});
   const handleRadioSelect = (index) => {
     const updatedAnsOptions = { ...ansOption };
     updatedAnsOptions[currentQuestionIndex] = index;
     setAnsOption(updatedAnsOptions);
   };
-
-  const [timerType, setTimerType] = useState({});
-
-  const [newQuizId, setNewQuizId] = useState(null);
 
   const handleTimerTypeSelect = (value) => {
     const updatedTimerTypes = { ...timerType };
@@ -262,9 +264,6 @@ const Dashboard = () => {
   };
 
   //for analytics tab
-  const [quizzes, setQuizzes] = useState([]);
-  const [isAnalyticsLoading, setAnalyticsLoading] = useState(true);
-
   useEffect(() => {
     axios
       .get(`http://localhost:3100/api/quizzes?email=${email}`)
@@ -280,7 +279,6 @@ const Dashboard = () => {
   }, [activeScreen, email]);
 
   //for quiz published modal
-  const [showQuizPublishedModal, setShowQuizPublishedModal] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -296,7 +294,6 @@ const Dashboard = () => {
   }, []);
 
   const jwtToken = localStorage.getItem("jwt");
-  console.log("jwt from local storage:", jwtToken);
 
   axios
     .get(`http://localhost:3100/api/isloggedin`, {
@@ -380,11 +377,6 @@ const Dashboard = () => {
     });
   };
 
-  //for quiz data in dashboard
-  const [quizData, setQuizData] = useState(null);
-  const [trendingQuizzes, setTrendingQuizzes] = useState([]);
-  const [dashboardLoading, setDashboardLoading] = useState(true);
-
   useEffect(() => {
     // Fetch data for dashboard main container
     axios
@@ -417,6 +409,8 @@ const Dashboard = () => {
       }, 600);
     }
   }, [quizData, trendingQuizzes]);
+
+  console.log(trendingQuizzes)
 
   return (
     <>
