@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Dashboard.module.css";
+import styles from "./dashboard.module.css";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 

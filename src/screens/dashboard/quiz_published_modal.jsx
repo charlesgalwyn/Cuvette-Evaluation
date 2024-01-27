@@ -1,6 +1,6 @@
 import React from "react";
 import Confetti from "react-confetti";
-import styles from "./Dashboard.module.css";
+import styles from "./dashboard.module.css";
 
 const QuizPublished = ({
   width,

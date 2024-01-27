@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import styles from "./Dashboard.module.css";
+import styles from "./dashboard.module.css";
 import DeleteIcon from "../../assets/images/delete-icon.svg";
 import EditIcon from "../../assets/images/edit-icon.svg";
 import ShareIcon from "../../assets/images/share-icon.svg";

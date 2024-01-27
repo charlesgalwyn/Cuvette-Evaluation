@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Routes, Route } from "react-router-dom";
 import Register from "./screens/register/Register";
-import Dashboard from "./screens/dashboard/Dashboard";
+import Dashboard from "./screens/dashboard/dashboard";
 import PollCompletion from "./screens/pollCompletion/PollCompletion";
 import QuizCompletion from "./screens/quizCompletion/QuizCompletion";
 import Questions from "./screens/questions/Questions";
