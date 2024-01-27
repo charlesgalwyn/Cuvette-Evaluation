@@ -330,7 +330,7 @@ const Dashboard = () => {
   };
 
   const handleShareIconClick = (quizId) => {
-    const quizLink = `http://localhost:3100/quiz/${quizId}`;
+    const quizLink = `http://localhost:3000/quiz/${quizId}`;
     navigator.clipboard
       .writeText(quizLink)
       .then(() => {

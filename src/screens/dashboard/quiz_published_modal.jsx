@@ -29,7 +29,7 @@ const QuizPublished = ({
                 </p>
                 <div className={styles.quizLink}>
                   {newQuizId
-                    ? `http://localhost:3100/quiz/${newQuizId}`
+                    ? `http://localhost:3000/quiz/${newQuizId}`
                     : "Link loading... "}
                 </div>
 
