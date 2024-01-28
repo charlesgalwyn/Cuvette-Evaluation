@@ -8,6 +8,7 @@ import QuizCompletion from "./screens/quizCompletion/QuizCompletion";
 import Questions from "./screens/questions/Questions";
 import ItemNotFound from "./screens/itemNotFound/ItemNotFound";
 import QuizAnalysis from "./screens/quizAnalysis/QuizAnalysis";
+import Dashboard2 from "./screens/dashboard2/dashboard2";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
   {
     path: "/dashboard",
     element: <Dashboard />,
+  },
+  {
+    path: "/dashboard2",
+    element: <Dashboard2 />,
   },
   {
     path: "/pollcompleted",
