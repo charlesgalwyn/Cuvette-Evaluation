@@ -3,8 +3,8 @@ import React, { useEffect, useState } from 'react'
 import { toast } from 'react-toastify';
 import { useParams } from 'react-router-dom';
 import Loader from '../utils/globalLoader/Loader';
-import QuizQuestionAnalysis from '../components/QuesAnalysis/QuizQuestionAnalysis';
-import PollQuestionAnalysis from '../components/QuesAnalysis/PollQuestionAnalysis';
+import QuizQuestionAnalysis from '../components/ques_analysis/quiz_question_analysis';
+import PollQuestionAnalysis from '../components/ques_analysis/poll_question_analysis';
 
 const QWiseAnalysis = () => {
 
