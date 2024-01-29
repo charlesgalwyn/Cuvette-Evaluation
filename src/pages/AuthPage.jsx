@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import Signup from '../components/AuthComponents/signup'
-import Login from '../components/AuthComponents/login';
+import Signup from '../components/auth_components/signup'
+import Login from '../components/auth_components/login';
 import { useNavigate } from 'react-router-dom';
 
 const AuthPage = () => {
