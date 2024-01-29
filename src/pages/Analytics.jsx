@@ -1,5 +1,5 @@
 import React from 'react'
-import AnalyticsWrapper from '../components/Analytics/AnalyticsWrapper'
+import AnalyticsWrapper from '../components/analytics/analyticsWrapper'
 
 const Analytics = () => {
   return (

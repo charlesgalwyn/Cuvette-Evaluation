@@ -1,7 +1,7 @@
 import React from 'react'
 import Popup from 'reactjs-popup'
 import 'reactjs-popup/dist/index.css';
-import Style from './DeleteConfirmationPopup.module.css'
+import Style from './delete_confirmation_popup.module.css'
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
@@ -25,7 +25,6 @@ const DeleteConfirmationPopup = ({ popupInfo, setOpen, setLoading, setRefresh })
     } catch (error) {
       toast.error(error?.response?.data?.error)
     }
-    // setLoading(false)
   }
 
   return (
@@ -36,7 +35,7 @@ const DeleteConfirmationPopup = ({ popupInfo, setOpen, setLoading, setRefresh })
         contentStyle={{ borderRadius: "10px", width: '845px', height: '300px' }}
       >
         <div className={Style.deletePopup}>
-          <h1>Are you confirm <br/> you want to delete ?</h1>
+          <h1>Are you confirm <br /> you want to delete ?</h1>
           <div>
             <button onClick={deleteQuize}>Confirm Delete</button>
             <button onClick={() => { setOpen({ isOpen: false, id: '' }) }}>Cancel</button>
