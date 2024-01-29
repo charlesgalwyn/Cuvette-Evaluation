@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import CreateQuize from './CreateQuize'
+import CreateQuize from './create_quize'
 import { toast } from 'react-toastify';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
