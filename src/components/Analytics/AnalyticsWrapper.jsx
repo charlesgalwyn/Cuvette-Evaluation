@@ -69,8 +69,8 @@ const AnalyticsWrapper = () => {
                             <td>Quiz Name</td>
                             <td>Created On</td>
                             <td>Impressions</td>
-                            <td></td>
-                            <td></td>
+                            <td>Operations</td>
+                            <td>Analysis</td>
                         </tr>
                     </thead>
                     <tbody>
