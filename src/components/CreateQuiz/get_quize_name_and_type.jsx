@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Style from './GetQuizeNameAndType.module.css'
+import Style from './get_quize_name_and_type.module.css'
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 
@@ -10,7 +10,6 @@ const GetQuizeNameAndType = ({sendNameType, changePopup}) => {
     quizeType: '',
   })
 
-  //function to handle continue button
   const continueHandler = (e) =>{
     e.preventDefault();
 

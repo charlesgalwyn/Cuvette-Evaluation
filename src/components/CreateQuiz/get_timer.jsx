@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Style from './GetTimer.module.css'
+import Style from './get_timer.module.css'
 const GetTimer = ({quizeData}) => {
 
     const [timer, setTimer] = useState(quizeData.timePerQuestion); 

@@ -1,5 +1,5 @@
 import React from 'react'
-import Style from './CompletedPopup.module.css'
+import Style from './completed_popup.module.css'
 import { RxCross2 } from "react-icons/rx";
 import { Link } from 'react-router-dom';
 import {CopyToClipboard} from 'react-copy-to-clipboard';

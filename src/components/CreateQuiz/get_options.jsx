@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { RiDeleteBin6Fill } from "react-icons/ri";
-import Style from './GetOptions.module.css';
+import Style from './get_options.module.css';
 
 const GetOptions = ({ questions, quizeData, no, setQ }) => {
 

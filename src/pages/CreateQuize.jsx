@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react'
 import { quizeInfo } from '../utils/dummyObjects/quize'
 import Popup from 'reactjs-popup'
 import 'reactjs-popup/dist/index.css';
-import GetQuizeNameAndType from '../components/CreateQuiz/GetQuizeNameAndType'
-import GetAllQuestions from '../components/CreateQuiz/GetAllQuestions';
-import CompletedPopup from '../components/CreateQuiz/CompletedPopup';
+import GetQuizeNameAndType from '../components/CreateQuiz/get_quize_name_and_type'
+import GetAllQuestions from '../components/CreateQuiz/get_all_questions';
+import CompletedPopup from '../components/CreateQuiz/completedPopup';
 
 
 const CreateQuize = ({ quizeInfor = {}, type = 'create' }) => {
