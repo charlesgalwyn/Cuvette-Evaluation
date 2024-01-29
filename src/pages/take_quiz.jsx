@@ -5,8 +5,8 @@ import Popup from 'reactjs-popup'
 import 'reactjs-popup/dist/index.css';
 import { useParams } from 'react-router-dom';
 import Loader from '../utils/globalLoader/Loader';
-import ShowQuizeQuestion from '../components/TakeQuize/show_quiz_question';
-import FinishQuize from '../components/TakeQuize/finish_quiz';
+import ShowQuizeQuestion from '../components/take_quiz/show_quiz_question';
+import FinishQuize from '../components/take_quiz/finish_quiz';
 
 const TakeQuize = () => {
 
