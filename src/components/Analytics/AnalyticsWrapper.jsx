@@ -96,7 +96,7 @@ const AnalyticsWrapper = () => {
                         }
                     </tbody>
                 </table>
-                {quizes.length <= 0 && <h2>NO QUIZ HERE</h2>}
+                {quizes.length <= 0 && <h2>You haven't created any Quiz, Click on Create Quiz to create your first Quiz</h2>}
             </div>
             <DeleteConfirmationPopup
                 popupInfo={deletePopup}

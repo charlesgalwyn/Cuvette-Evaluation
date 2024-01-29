@@ -36,7 +36,7 @@ const DeleteConfirmationPopup = ({ popupInfo, setOpen, setLoading, setRefresh })
         contentStyle={{ borderRadius: "10px", width: '845px', height: '300px' }}
       >
         <div className={Style.deletePopup}>
-          <h1>Are you confirm you want to delete ?</h1>
+          <h1>Are you confirm <br/> you want to delete ?</h1>
           <div>
             <button onClick={deleteQuize}>Confirm Delete</button>
             <button onClick={() => { setOpen({ isOpen: false, id: '' }) }}>Cancel</button>
