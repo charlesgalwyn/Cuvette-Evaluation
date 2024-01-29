@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { Outlet, useNavigate } from 'react-router-dom'
-import SideBar from '../components/SideBar/SideBar';
+import SideBar from '../components/side_bar/side_bar';
 
 const HomePage = () => {
   const navigate = useNavigate();
