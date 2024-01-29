@@ -1,5 +1,5 @@
 import React from 'react'
-import Style from './QuizeCard.module.css'
+import Style from './quiz_card.module.css'
 import { ImEye } from "react-icons/im";
 import { getFormatedDate, getFormatedNo } from '../../utils/Common Functions/common_functions';
 
@@ -15,7 +15,7 @@ const QuizeCard = ({ quizeData }) => {
                     <h2><ImEye /></h2>
                 </div>
             </div>
-            <p> Created On: 
+            <p> Created On:
                 {
                     quizeData?.createdAt &&
                     ` ${getFormatedDate(quizeData?.createdAt)}`

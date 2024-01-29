@@ -1,5 +1,5 @@
 import React from 'react'
-import DashboardWrapper from '../components/DashboardComponents/DashboardWrapper'
+import DashboardWrapper from '../components/dashboard_components/dashboard_wrapper'
 
 const Dashboard = () => {
   return (

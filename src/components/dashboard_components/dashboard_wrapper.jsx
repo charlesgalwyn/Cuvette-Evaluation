@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import Loader from '../../utils/globalLoader/Loader';
 import axios from 'axios';
-import Header from './Header';
-import Style from './DashboardWrapper.module.css';
-import QuizeCard from './QuizeCard';
+import Header from './header';
+import Style from './dashboard_wrapper.module.css';
+import QuizeCard from './quiz_card';
 import { toast } from 'react-toastify';
 
 const DashboardWrapper = () => {
