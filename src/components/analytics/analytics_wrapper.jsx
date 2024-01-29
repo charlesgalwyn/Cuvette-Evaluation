@@ -10,7 +10,7 @@ import { IoMdShare } from "react-icons/io";
 import { Link } from 'react-router-dom';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import DeleteConfirmationPopup from './delete_confirmation_popup';
-import CreateQuize from '../../pages/create_quize';
+import CreateQuize from '../../screens/create_quize';
 
 
 const AnalyticsWrapper = () => {

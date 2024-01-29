@@ -1,13 +1,13 @@
 import { Route, Routes } from "react-router-dom"
-import AuthPage from "./pages/auth_page"
-import HomePage from "./pages/home_page"
-import Dashboard from "./pages/dashboard"
-import Analytics from "./pages/analytics"
-import CreateQuize from "./pages/create_quize"
+import AuthPage from "./screens/auth_page"
+import HomePage from "./screens/home_page"
+import Dashboard from "./screens/dashboard"
+import Analytics from "./screens/analytics"
+import CreateQuize from "./screens/create_quize"
 import Loader from "./utils/globalLoader/Loader"
-import TakeQuize from "./pages/take_quiz"
-import EditQuize from "./pages/edit_quiz"
-import QWiseAnalysis from "./pages/q_wise_analysis"
+import TakeQuize from "./screens/take_quiz"
+import EditQuize from "./screens/edit_quiz"
+import QWiseAnalysis from "./screens/q_wise_analysis"
 import { ToastContainer } from 'react-toastify'
 import "react-toastify/dist/ReactToastify.css";
 
