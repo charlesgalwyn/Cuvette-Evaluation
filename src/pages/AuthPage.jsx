@@ -7,15 +7,13 @@ const AuthPage = () => {
   const navigate = useNavigate();
   const [authType, setAuthType] = useState('sign-up');
 
-  //function to change signup to login and vice versa
-  const changeTypeFun = (val) =>{
+  const changeTypeFun = (val) => {
     setAuthType(val);
   }
 
-  //redirecting to home page if authToken is available in localstorage
-  useEffect(()=>{
+  useEffect(() => {
     const jwtToken = localStorage.getItem('authToken');
-    if(jwtToken){
+    if (jwtToken) {
       navigate('/dashboard')
     }
   }, [])
@@ -23,8 +21,8 @@ const AuthPage = () => {
   return (
     <>
       {
-        authType == 'sign-up' ? <Signup authType={authType} changeType={changeTypeFun} /> : 
-        <Login authType={authType} changeType={changeTypeFun} />
+        authType == 'sign-up' ? <Signup authType={authType} changeType={changeTypeFun} /> :
+          <Login authType={authType} changeType={changeTypeFun} />
       }
     </>
   )

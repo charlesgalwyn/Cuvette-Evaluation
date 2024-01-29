@@ -8,42 +8,42 @@ import PollQuestionAnalysis from '../components/QuesAnalysis/PollQuestionAnalysi
 
 const QWiseAnalysis = () => {
 
-    const { id } = useParams();
-    const [loading, setLoading] = useState(false);
-    const [quize, setQuize] = useState({});
+  const { id } = useParams();
+  const [loading, setLoading] = useState(false);
+  const [quize, setQuize] = useState({});
 
-    const fetchQuizes = async () => {
-        setLoading(true)
-        try {
-            const { data } = await axios.get(`http://localhost:4000/api/quize/${id}`, {
-                headers: {
-                    authorization: localStorage.getItem('authToken')
-                }
-            })
-            console.log(data)
-            setQuize(data.quize);
-        } catch (error) {
-            toast.error(error?.response?.data?.error);
+  const fetchQuizes = async () => {
+    setLoading(true)
+    try {
+      const { data } = await axios.get(`http://localhost:4000/api/quize/${id}`, {
+        headers: {
+          authorization: localStorage.getItem('authToken')
         }
-        setLoading(false)
+      })
+      console.log(data)
+      setQuize(data.quize);
+    } catch (error) {
+      toast.error(error?.response?.data?.error);
     }
+    setLoading(false)
+  }
 
-    useEffect(() => {
-        fetchQuizes();
-    }, [])
+  useEffect(() => {
+    fetchQuizes();
+  }, [])
 
-    return (
-        <>
-            {loading && <Loader />}
-            <div>
-                {
-                    quize?.quizeType == 'QnA' ?
-                        <QuizQuestionAnalysis quizeData={quize} /> :
-                        <PollQuestionAnalysis pollData={quize} />
-                }
-            </div>
-        </>
-    )
+  return (
+    <>
+      {loading && <Loader />}
+      <div>
+        {
+          quize?.quizeType == 'QnA' ?
+            <QuizQuestionAnalysis quizeData={quize} /> :
+            <PollQuestionAnalysis pollData={quize} />
+        }
+      </div>
+    </>
+  )
 }
 
 export default QWiseAnalysis

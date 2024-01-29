@@ -40,7 +40,7 @@ const CreateQuize = ({ quizeInfor = {}, type = 'create' }) => {
           currentPopup == 'nameType' ?
             <GetQuizeNameAndType sendNameType={nameTypeReciever} changePopup={popupChanger} /> :
             currentPopup == 'question' ?
-              <GetAllQuestions setUrl={setUrl} changePopup={popupChanger} quizeData={quizeData} type={type}/> :
+              <GetAllQuestions setUrl={setUrl} changePopup={popupChanger} quizeData={quizeData} type={type} /> :
               <CompletedPopup url={url} changePopup={popupChanger} />
         }
 
