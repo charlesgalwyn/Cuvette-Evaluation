@@ -50,15 +50,15 @@
     align-items: center;
 }
 
-/* .analysisContainer > div:nth-child(2) > div::after{
+.analysisContainer > div:nth-child(2) > div::after{
     content: "";
     display: block;
     width: 90%;
-    height: 2px;
-    background-color: #D7D7D7;
+    height: 3px;
+    background-color: #a39d9d;
     border-radius: 2px;
     margin-bottom: 20px;
-} */
+}
 
 .analysisContainer > div:nth-child(2) > div > div > div > h1{
     font-size: 30px;

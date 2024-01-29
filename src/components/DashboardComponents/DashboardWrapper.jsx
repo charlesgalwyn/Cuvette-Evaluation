@@ -61,7 +61,7 @@ const DashboardWrapper = () => {
                             ))
                         }
                     </div>
-                    {allQuizes.length <= 0 && <h2>NO QUIZ HERE</h2>}
+                    {allQuizes.length <= 0 && <h2>You haven't created any quiz , Click on Create Quiz to create your first Quiz</h2>}
                 </div>
             </div>
         </>
