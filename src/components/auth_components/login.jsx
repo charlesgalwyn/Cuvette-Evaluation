@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Style from './auth.module.css'
+import Style from '../../styles/auth.module.css'
 import axios from 'axios';
 import ButtonLoader from '../../utils/buttonLoader/ButtonLoader';
 import { useNavigate } from 'react-router-dom';

@@ -1,6 +1,6 @@
 import React from 'react'
 import { getFormatedDate } from '../../utils/Common Functions/common_functions'
-import Style from './question_analysis.module.css'
+import Style from '../../styles/question_analysis.module.css'
 
 const QuizQuestionAnalysis = ({ quizeData }) => {
   console.log(quizeData.createdAt)

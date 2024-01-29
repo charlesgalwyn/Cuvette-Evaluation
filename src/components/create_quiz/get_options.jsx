@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { RiDeleteBin6Fill } from "react-icons/ri";
-import Style from './get_options.module.css';
+import Style from '../../styles/get_options.module.css';
 
 const GetOptions = ({ questions, quizeData, no, setQ }) => {
 
@@ -47,13 +47,13 @@ const GetOptions = ({ questions, quizeData, no, setQ }) => {
   };
 
   //function to give the class to change the bg color to green of options
-  const setOnClickBg = (i)=>{
-   if(questions[no].correctOption == i && quizeData.quizeType == 'QnA'){
-    return Style.bgGreen;
-   }else{
-    return ''
-   }
-   
+  const setOnClickBg = (i) => {
+    if (questions[no].correctOption == i && quizeData.quizeType == 'QnA') {
+      return Style.bgGreen;
+    } else {
+      return ''
+    }
+
   }
 
 
@@ -65,7 +65,7 @@ const GetOptions = ({ questions, quizeData, no, setQ }) => {
             <div key={i}>
               <div className={Style.radioInput} >
                 <input
-                  style={quizeData.quizeType !== 'QnA' ? {display: 'none'}: {display: 'block'}}
+                  style={quizeData.quizeType !== 'QnA' ? { display: 'none' } : { display: 'block' }}
                   type="radio"
                   id={'option' + i}
                   value={i + 1}
@@ -79,7 +79,7 @@ const GetOptions = ({ questions, quizeData, no, setQ }) => {
                   questions[no].optionType == 'text' ?
                     <div>
                       <input type="text" value={item.text || ''}
-                        className={setOnClickBg(i+1)}
+                        className={setOnClickBg(i + 1)}
                         onChange={(e) => { optionDataReciever(e, i) }}
                         name='textInput' placeholder='Text'
                       />
@@ -92,7 +92,7 @@ const GetOptions = ({ questions, quizeData, no, setQ }) => {
                     questions[no].optionType == 'imageURL' ?
                       <div>
                         <input type="text" value={item.imageURL || ''}
-                          className={setOnClickBg(i+1)}
+                          className={setOnClickBg(i + 1)}
                           onChange={(e) => { optionDataReciever(e, i) }}
                           name='imageURLInput' placeholder='Image URL'
                         />
@@ -103,13 +103,13 @@ const GetOptions = ({ questions, quizeData, no, setQ }) => {
 
                       <div>
                         <input type="text" value={item.text || ''}
-                          className={setOnClickBg(i+1)}
+                          className={setOnClickBg(i + 1)}
                           onChange={(e) => { optionDataReciever(e, i) }}
                           name='textImage1' placeholder='Text'
                         />
 
                         <input type="text" value={item.imageURL || ''}
-                          className={setOnClickBg(i+1)}
+                          className={setOnClickBg(i + 1)}
                           onChange={(e) => { optionDataReciever(e, i) }}
                           name='textImage2' placeholder='Image URL'
                         />

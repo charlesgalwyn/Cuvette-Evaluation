@@ -1,13 +1,13 @@
 import React from 'react'
-import Style from './completed_popup.module.css'
+import Style from '../../styles/completed_popup.module.css'
 import { RxCross2 } from "react-icons/rx";
 import { Link } from 'react-router-dom';
-import {CopyToClipboard} from 'react-copy-to-clipboard';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { toast } from 'react-toastify';
 
-const CompletedPopup = ({url}) => {
+const CompletedPopup = ({ url }) => {
 
-  const onCopyFun = () =>{
+  const onCopyFun = () => {
     toast.success('Link copied to your clipboard')
   }
 
@@ -19,8 +19,8 @@ const CompletedPopup = ({url}) => {
       <h1>Congrats your Quiz is Published!</h1>
       <div>{url}</div>
       <CopyToClipboard text={url} onCopy={onCopyFun} >
-          <button>Share</button>
-        </CopyToClipboard>
+        <button>Share</button>
+      </CopyToClipboard>
     </div>
   )
 }

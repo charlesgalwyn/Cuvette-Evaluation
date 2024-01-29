@@ -1,5 +1,5 @@
 import React from 'react'
-import Style from './get_qandoption_type.module.css'
+import Style from '../../styles/get_qandoption_type.module.css'
 
 
 const GetQandOptionType = ({ questions, setQ, i, quizeType }) => {

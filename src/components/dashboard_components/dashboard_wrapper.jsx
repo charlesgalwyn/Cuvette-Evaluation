@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Loader from '../../utils/globalLoader/Loader';
 import axios from 'axios';
 import Header from './header';
-import Style from './dashboard_wrapper.module.css';
+import Style from '../../styles/dashboard_wrapper.module.css';
 import QuizeCard from './quiz_card';
 import { toast } from 'react-toastify';
 
@@ -46,12 +46,12 @@ const DashboardWrapper = () => {
     <>
       {loading && <Loader />}
 
-      <div className={Style.DashboardContainer}>
+      <div className={Style.dashboard_container}>
         <div>
           <Header info={headerInfo} />
         </div>
         <div>
-          <h1>Trending Quizes</h1>
+          <h1>Trending Quizs</h1>
           <h3>NOTE : A quiz must have atleast 2 impressions to get listed on Trending List</h3>
           <div>
             {

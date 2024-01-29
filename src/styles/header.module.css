@@ -29,11 +29,11 @@
 }
 
 .headerContainer > div:nth-child(1){
-    color: #FF5D01;
+    color: rgb(235,90,48);
 }
 .headerContainer > div:nth-child(2){
-    color: #60B84B;
+    color: rgb(98,184,76);
 }
 .headerContainer > div:nth-child(3){
-    color: #5076FF;
+    color: rgb(80,118,253);
 }

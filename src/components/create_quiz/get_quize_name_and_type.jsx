@@ -1,30 +1,30 @@
 import React, { useState } from 'react';
-import Style from './get_quize_name_and_type.module.css'
+import Style from '../../styles/get_quize_name_and_type.module.css'
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 
-const GetQuizeNameAndType = ({sendNameType, changePopup}) => {
+const GetQuizeNameAndType = ({ sendNameType, changePopup }) => {
   const navigate = useNavigate();
   const [data, setData] = useState({
     name: '',
     quizeType: '',
   })
 
-  const continueHandler = (e) =>{
+  const continueHandler = (e) => {
     e.preventDefault();
 
-    if(data.name && data.quizeType && data.name.length <= 10){
+    if (data.name && data.quizeType && data.name.length <= 10) {
       sendNameType(data)
       changePopup('question')
-    }else if((data.name).length > 10){
+    } else if ((data.name).length > 10) {
       toast.error("Name should be less 10 characters!")
-    }else{
+    } else {
       toast.error("All fields are required!")
     }
   }
 
   //function to handle cancel button
-  const cancelHandler = () =>{
+  const cancelHandler = () => {
     navigate('/dashboard')
   }
 
@@ -32,16 +32,16 @@ const GetQuizeNameAndType = ({sendNameType, changePopup}) => {
     <div className={Style.createNameContainer}>
       <form>
         <div>
-          <input type="text" onChange={(e)=>{setData({...data, name: e.target.value})}} placeholder='Quize Name' />
+          <input type="text" onChange={(e) => { setData({ ...data, name: e.target.value }) }} placeholder='Quize Name' />
         </div>
         <div>
           <label >Quize Type</label>
 
           <h2 className={data.quizeType == 'QnA' ? Style.bgGreen : ''}
-          onClick={()=>{setData({...data, quizeType: 'QnA'})}}>Q & A</h2>
+            onClick={() => { setData({ ...data, quizeType: 'QnA' }) }}>Q & A</h2>
 
           <h2 className={data.quizeType == 'poll' ? Style.bgGreen : ''}
-          onClick={()=>{setData({...data, quizeType: 'poll'})}}>Poll Type</h2> 
+            onClick={() => { setData({ ...data, quizeType: 'poll' }) }}>Poll Type</h2>
 
         </div>
         <div className={Style.buttons}>

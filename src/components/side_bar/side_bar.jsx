@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
-import Style from './side_bar.module.css'
+import Style from '../../styles/side_bar.module.css'
 import { toast } from 'react-toastify';
 
 const SideBar = () => {
@@ -31,7 +31,7 @@ const SideBar = () => {
           onClick={() => { setCurrentNav('analytics') }}>Analytics</Link>
 
         <Link to={'/create-quize'} className={currentNav == 'create-quize' ? Style.hoverEffect : ''}
-          onClick={() => { setCurrentNav('create-quize') }}>Create Quize</Link>
+          onClick={() => { setCurrentNav('create-quize') }}>Create Quiz</Link>
       </div>
       <h2 onClick={logoutHandler}>LOGOUT</h2>
     </div>

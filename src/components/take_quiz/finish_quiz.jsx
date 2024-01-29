@@ -1,6 +1,6 @@
 import React from 'react';
 import trophy from '../../utils/images/trophy.png'
-import Style from './finish_quiz.module.css'
+import Style from '../../styles/finish_quiz.module.css'
 
 const FinishQuize = ({ total, result }) => {
 

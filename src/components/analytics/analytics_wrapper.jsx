@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import Style from './analytics.module.css'
+import Style from '../../styles/analytics.module.css'
 import { toast } from 'react-toastify';
 import Loader from '../../utils/globalLoader/Loader';
 import axios from 'axios';
@@ -23,7 +23,6 @@ const AnalyticsWrapper = () => {
     id: ''
   })
 
-  //function to fetch quizes from api set into respective states
   const fetchQuizes = async () => {
     setLoading(true)
     try {
@@ -38,7 +37,6 @@ const AnalyticsWrapper = () => {
       console.log(data)
 
     } catch (error) {
-      // console.log(allQuizes)
       toast.error(error?.response?.data?.error);
     }
     setLoading(false)

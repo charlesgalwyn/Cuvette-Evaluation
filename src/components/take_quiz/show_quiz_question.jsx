@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Style from './show_quiz_question.module.css'
+import Style from '../../styles/show_quiz_question.module.css'
 
 const ShowQuizeQuestion = ({ question, no, time, length, submitHandler, setNo, setOpt, correctOptions }) => {
 

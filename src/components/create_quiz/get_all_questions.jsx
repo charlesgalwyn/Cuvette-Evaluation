@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Style from './qet_all_questions.module.css'
+import Style from '../../styles/get_all_questions.module.css'
 import { IoMdAdd } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
 import GetQandOptionType from './get_qandoption_type';

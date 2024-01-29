@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-import Style from './auth.module.css'
+import Style from '../../styles/auth.module.css'
 import ButtonLoader from '../../utils/buttonLoader/ButtonLoader';
 import { toast } from 'react-toastify';
 
