@@ -3,7 +3,7 @@ import CreateQuize from './create_quize'
 import { toast } from 'react-toastify';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-import Loader from '../utils/globalLoader/Loader';
+import Loader from '../utils/globalLoader/loader';
 
 const EditQuize = () => {
   const { id } = useParams();

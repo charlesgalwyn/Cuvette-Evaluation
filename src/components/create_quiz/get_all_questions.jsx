@@ -6,7 +6,7 @@ import GetQandOptionType from './get_qandoption_type';
 import GetOptions from './get_options';
 import { toast } from 'react-toastify';
 import axios from 'axios';
-import Loader from '../../utils/globalLoader/Loader';
+import Loader from '../../utils/globalLoader/loader';
 import { quizeInfo } from '../../utils/dummyObjects/quize';
 import GetTimer from './get_timer';
 import { useNavigate } from 'react-router-dom';

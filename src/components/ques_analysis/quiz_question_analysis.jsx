@@ -1,5 +1,5 @@
 import React from 'react'
-import { getFormatedDate } from '../../utils/Common Functions/common_functions'
+import { getFormatedDate } from '../../utils/helper/helper_functions'
 import Style from '../../styles/question_analysis.module.css'
 
 const QuizQuestionAnalysis = ({ quizeData }) => {

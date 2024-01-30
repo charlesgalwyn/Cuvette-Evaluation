@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Style from '../../styles/auth.module.css'
 import axios from 'axios';
-import ButtonLoader from '../../utils/buttonLoader/ButtonLoader';
+import ButtonLoader from '../../utils/buttonLoader/button_loader';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 

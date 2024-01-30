@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import Loader from '../../utils/globalLoader/Loader';
+import Loader from '../../utils/globalLoader/loader';
 import axios from 'axios';
 import Header from './header';
 import Style from '../../styles/dashboard_wrapper.module.css';

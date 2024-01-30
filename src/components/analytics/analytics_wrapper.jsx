@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Style from '../../styles/analytics.module.css'
 import { toast } from 'react-toastify';
-import Loader from '../../utils/globalLoader/Loader';
+import Loader from '../../utils/globalLoader/loader';
 import axios from 'axios';
 import { getFormatedDate, getFormatedNo } from '../../utils/helper/helper_functions';
 import { FaRegEdit } from "react-icons/fa";
