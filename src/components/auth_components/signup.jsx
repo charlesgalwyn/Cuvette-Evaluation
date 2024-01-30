@@ -84,7 +84,7 @@ const Signup = ({ authType, changeType }) => {
     setLoading(true)
     if (validateAuthData()) {
       try {
-        const { data } = await axios.post('http://localhost:4000/api/user/sign-up', authData);
+        const { data } = await axios.post('http://localhost:4000/api/user/signup', authData);
         toast.success(data.message);
 
       } catch (error) {

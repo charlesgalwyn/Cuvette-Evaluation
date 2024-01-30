@@ -24,7 +24,7 @@ const TakeQuize = () => {
   const fetchQ = async () => {
     setLoading(true)
     try {
-      const { data } = await axios.get(`http://localhost:4000/api/quize/get-one/${id}`)
+      const { data } = await axios.get(`http://localhost:4000/api/quiz/take-quiz/${id}`)
       console.log(data)
       setCurrectOptions(Array(data.questions.length).fill(null));
       setQuestion(data.questions);
@@ -46,7 +46,7 @@ const TakeQuize = () => {
   const submitHandler = async () => {
     setLoading(true);
     try {
-      const { data } = await axios.post('http://localhost:4000/api/quize/save-result', {
+      const { data } = await axios.post('http://localhost:4000/api/quiz/save-quiz-result', {
         quizeId: id,
         choosedOptions: correctOptions,
       })

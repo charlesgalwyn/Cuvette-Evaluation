@@ -20,7 +20,7 @@ const DashboardWrapper = () => {
   const fetchQuizes = async () => {
     setLoading(true)
     try {
-      const { data } = await axios.get(`http://localhost:4000/api/quize/get-all`, {
+      const { data } = await axios.get(`http://localhost:4000/api/quiz/get-quizes`, {
         headers: {
           authorization: localStorage.getItem('authToken')
         }

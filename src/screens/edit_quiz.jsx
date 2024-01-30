@@ -13,7 +13,7 @@ const EditQuize = () => {
 
   const fetchQuizes = async () => {
     try {
-      const { data } = await axios.get(`http://localhost:4000/api/quize/${id}`, {
+      const { data } = await axios.get(`http://localhost:4000/api/quiz/${id}`, {
         headers: {
           authorization: localStorage.getItem('authToken')
         }
