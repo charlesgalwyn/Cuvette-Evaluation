@@ -13,7 +13,7 @@ const EditQuize = () => {
 
   const fetchQuizes = async () => {
     try {
-      const { data } = await axios.get(`http://localhost:4000/api/quiz/${id}`, {
+      const { data } = await axios.get(`https://cuvette-quizzie-test.onrender.com/api/quiz/${id}`, {
         headers: {
           authorization: localStorage.getItem('authToken')
         }

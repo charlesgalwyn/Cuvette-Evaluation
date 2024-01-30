@@ -26,7 +26,7 @@ const AnalyticsWrapper = () => {
   const fetchQuizes = async () => {
     setLoading(true)
     try {
-      const { data } = await axios.get(`http://localhost:4000/api/quiz/user-quizes`, {
+      const { data } = await axios.get(`https://cuvette-quizzie-test.onrender.com/api/quiz/user-quizes`, {
         headers: {
           authorization: localStorage.getItem('authToken')
         }
