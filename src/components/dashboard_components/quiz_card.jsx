@@ -1,7 +1,7 @@
 import React from 'react'
 import Style from '../../styles/quiz_card.module.css'
 import { ImEye } from "react-icons/im";
-import { getFormatedDate, getFormatedNo } from '../../utils/Common Functions/common_functions';
+import { getFormatedDate, getFormatedNo } from '../../utils/helper/helper_functions';
 
 const QuizeCard = ({ quizeData }) => {
 

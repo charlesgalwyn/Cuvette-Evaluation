@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import Style from '../../styles/auth.module.css'
-import ButtonLoader from '../../utils/buttonLoader/ButtonLoader';
+import ButtonLoader from '../../utils/buttonLoader/button_loader';
 import { toast } from 'react-toastify';
 
 const Signup = ({ authType, changeType }) => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import Style from './ButtonLoader.module.css';
+import Style from '../../styles/button_loader.module.css';
 
 const ButtonLoader = () => {
   return (

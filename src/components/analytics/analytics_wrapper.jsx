@@ -3,7 +3,7 @@ import Style from '../../styles/analytics.module.css'
 import { toast } from 'react-toastify';
 import Loader from '../../utils/globalLoader/Loader';
 import axios from 'axios';
-import { getFormatedDate, getFormatedNo } from '../../utils/Common Functions/common_functions';
+import { getFormatedDate, getFormatedNo } from '../../utils/helper/helper_functions';
 import { FaRegEdit } from "react-icons/fa";
 import { RiDeleteBin6Fill } from "react-icons/ri";
 import { IoMdShare } from "react-icons/io";

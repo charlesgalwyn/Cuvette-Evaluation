@@ -1,6 +1,6 @@
 import React from 'react'
 import Style from '../../styles/header.module.css'
-import { getFormatedNo } from '../../utils/Common Functions/common_functions'
+import { getFormatedNo } from '../../utils/helper/helper_functions'
 
 const Header = ({ info }) => {
   return (
