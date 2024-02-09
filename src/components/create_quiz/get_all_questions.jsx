@@ -101,7 +101,7 @@ const GetAllQuestions = ({ setUrl, changePopup, quizeData, type }) => {
 
   const submitCreateQuize = async () => {
     try {
-      const { data } = await axios.post('https://cuvette-quizzie-test.onrender.com/api/quiz/create-quiz', quizeData, {
+      const { data } = await axios.post('https://quizzie-new.onrender.com/api/quiz/create-quiz', quizeData, {
         headers: {
           Authorization: localStorage.getItem('authToken')
         }
@@ -118,7 +118,7 @@ const GetAllQuestions = ({ setUrl, changePopup, quizeData, type }) => {
 
   const submitEditQuize = async () => {
     try {
-      const { data } = await axios.put(`https://cuvette-quizzie-test.onrender.com/api/quiz/${quizeData._id}`, quizeData, {
+      const { data } = await axios.put(`https://quizzie-new.onrender.com/api/quiz/${quizeData._id}`, quizeData, {
         headers: {
           Authorization: localStorage.getItem('authToken')
         }

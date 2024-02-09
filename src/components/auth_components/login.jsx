@@ -63,7 +63,7 @@ const Login = ({ authType, changeType }) => {
     setLoading(true);
     if (validateAuthData()) {
       try {
-        const { data } = await axios.post('https://cuvette-quizzie-test.onrender.com/api/user/login', authData)
+        const { data } = await axios.post('https://quizzie-new.onrender.com/api/user/login', authData)
 
         //saving jwt token in localstorage
         localStorage.setItem("authToken", data.jwtToken)

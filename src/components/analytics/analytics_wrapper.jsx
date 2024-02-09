@@ -26,7 +26,7 @@ const AnalyticsWrapper = () => {
   const fetchQuizes = async () => {
     setLoading(true)
     try {
-      const { data } = await axios.get(`https://cuvette-quizzie-test.onrender.com/api/quiz/user-quizes`, {
+      const { data } = await axios.get(`https://quizzie-new.onrender.com/api/quiz/user-quizes`, {
         headers: {
           authorization: localStorage.getItem('authToken')
         }
@@ -54,6 +54,8 @@ const AnalyticsWrapper = () => {
   const editHandler = (q) => {
     return <CreateQuize quizeInfo={q} />
   }
+
+  console.log(quizes)
 
   return (
     <>

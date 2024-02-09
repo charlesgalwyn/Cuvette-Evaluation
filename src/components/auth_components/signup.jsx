@@ -84,7 +84,7 @@ const Signup = ({ authType, changeType }) => {
     setLoading(true)
     if (validateAuthData()) {
       try {
-        const { data } = await axios.post('https://cuvette-quizzie-test.onrender.com/api/user/signup', authData);
+        const { data } = await axios.post('https://quizzie-new.onrender.com/api/user/signup', authData);
         toast.success(data.message);
 
       } catch (error) {

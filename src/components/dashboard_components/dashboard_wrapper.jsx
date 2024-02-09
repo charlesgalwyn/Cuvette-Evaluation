@@ -20,7 +20,7 @@ const DashboardWrapper = () => {
   const fetchQuizes = async () => {
     setLoading(true)
     try {
-      const { data } = await axios.get(`https://cuvette-quizzie-test.onrender.com/api/quiz/get-quizes`, {
+      const { data } = await axios.get(`https://quizzie-new.onrender.com/api/quiz/get-quizes`, {
         headers: {
           authorization: localStorage.getItem('authToken')
         }

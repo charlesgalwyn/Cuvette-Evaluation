@@ -24,7 +24,7 @@ const TakeQuize = () => {
   const fetchQ = async () => {
     setLoading(true)
     try {
-      const { data } = await axios.get(`https://cuvette-quizzie-test.onrender.com/api/quiz/take-quiz/${id}`)
+      const { data } = await axios.get(`https://quizzie-new.onrender.com/api/quiz/take-quiz/${id}`)
       console.log(data)
       setCurrectOptions(Array(data.questions.length).fill(null));
       setQuestion(data.questions);
@@ -46,7 +46,7 @@ const TakeQuize = () => {
   const submitHandler = async () => {
     setLoading(true);
     try {
-      const { data } = await axios.post('https://cuvette-quizzie-test.onrender.com/api/quiz/save-quiz-result', {
+      const { data } = await axios.post('https://quizzie-new.onrender.com/api/quiz/save-quiz-result', {
         quizeId: id,
         choosedOptions: correctOptions,
       })

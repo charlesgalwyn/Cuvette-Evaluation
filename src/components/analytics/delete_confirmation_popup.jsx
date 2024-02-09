@@ -15,7 +15,7 @@ const DeleteConfirmationPopup = ({ popupInfo, setOpen, setLoading, setRefresh })
     setOpen({ isOpen: false, id: '' })
     setLoading(true)
     try {
-      const { data } = await axios.delete(`https://cuvette-quizzie-test.onrender.com/api/quiz/${popupInfo?.id}`, {
+      const { data } = await axios.delete(`https://quizzie-new.onrender.com/api/quiz/${popupInfo?.id}`, {
         headers: {
           authorization: localStorage.getItem('authToken')
         }

@@ -15,7 +15,7 @@ const QWiseAnalysis = () => {
   const fetchQuizes = async () => {
     setLoading(true)
     try {
-      const { data } = await axios.get(`https://cuvette-quizzie-test.onrender.com/api/quiz/${id}`, {
+      const { data } = await axios.get(`https://quizzie-new.onrender.com/api/quiz/${id}`, {
         headers: {
           authorization: localStorage.getItem('authToken')
         }
